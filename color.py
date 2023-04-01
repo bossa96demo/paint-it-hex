@@ -1,4 +1,3 @@
-
 def main():
     active = input("active hex (2 hex decimals): ")
     inactive = input("inactive hex (2 hex decimals): ")
