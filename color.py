@@ -1,5 +1,13 @@
 def main():
     print("please, be sure that black and white are written after other colors")
+    norb = input("do you want to paint normal or bright colors?(n or b): ")
+    if norb == "n":
+        check = "  normal:"
+    elif norb == "b":
+        check = "  bright:"
+    else:
+        print("what?")
+        check = "  normal:"
     active = input("active hex (2 hex decimals): ")
     inactive = input("inactive hex (2 hex decimals): ")
     name = input("your username: ")
@@ -17,14 +25,6 @@ def main():
     print("    cyan:    '" + cyan +    "'")
     with open("/home/" + name + "/.config/alacritty/colors.yml", "r") as f:
         lines = f.readlines()
-    norb = input("do you want to paint normal or bright colors?(n or b): ")
-    if norb == "n":
-        check = "  normal:"
-    elif norb == "b":
-        check = "  bright:"
-    else:
-        print("what?")
-        check = "  normal:"
     with open("/home/" + name + "/.config/alacritty/colors.yml", "w") as f:
         i = 0
         while i < len(lines):
